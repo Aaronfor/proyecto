@@ -207,12 +207,11 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                     <table id="datatable-buttons" class="table table-striped table-bordered">
                                         <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>Cliente</th>
+                                            <th>Vendedor</th>
+                                            <th>fecha</th>
+                                            <th>total</th>
+                                            <th>producto</th>
                                         </tr>
                                         </thead>
 
@@ -221,12 +220,12 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                         
                                         
                                         <tr>
-                                            <td>Shou Itou</td>
-                                            <td>Regional Marketing</td>
-                                            <td>Tokyo</td>
+                                            <td>Taty1234</td>
+                                            <td>Aaron sanchez</td>
+                                            <td>22/oct/2017</td>
                                             <td>20</td>
                                             <td>2011/08/14</td>
-                                            <td>$163,000</td>
+                                            <td>2 memorias usb</td>
                                         </tr>
 
                                         </tbody>
@@ -235,98 +234,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                             </div>
                         </div>
 
-                        <div class="row p-t-50">
-                            <div class="col-sm-12">
-                                <div class="m-b-20 table-responsive">
-
-                                    <h5>Responsive Example</h5>
-                                    <table id="datatable-responsive"
-                                           class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
-                                           width="100%">
-                                        <thead>
-                                        <tr>
-                                            <th>First name</th>
-                                            <th>Last name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                            <th>Extn.</th>
-                                            <th>E-mail</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                       
-                                       
-                                        <tr>
-                                            <td>Fiona</td>
-                                            <td>Green</td>
-                                            <td>Chief Operating Officer (COO)</td>
-                                            <td>San Francisco</td>
-                                            <td>48</td>
-                                            <td>2010/03/11</td>
-                                            <td>$850,000</td>
-                                            <td>2947</td>
-                                            <td>f.green@datatables.net</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Shou</td>
-                                            <td>Itou</td>
-                                            <td>Regional Marketing</td>
-                                            <td>Tokyo</td>
-                                            <td>20</td>
-                                            <td>2011/08/14</td>
-                                            <td>$163,000</td>
-                                            <td>8899</td>
-                                            <td>s.itou@datatables.net</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        
-
-
-                        <div class="row p-t-50">
-                            <div class="col-sm-12">
-                                <div class="m-b-20 table-responsive">
-                                    <h5>ColVis Example</h5>
-                                    <p class="text-muted font-13 m-b-30">
-                                        In this example the column index is prefixed to the column title.
-                                    </p>
-
-                                    <table id="datatable-colvid" class="table table-striped table-bordered">
-                                        <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
-                                        </tr>
-                                        </thead>
-
-
-                                        <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                     <!-- end container -->

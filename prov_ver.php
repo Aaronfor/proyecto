@@ -15,8 +15,14 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
         <link rel="shortcut icon" href="assets/images/icono.png">
 
-        <!--Morris Chart CSS -->
-		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+        <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +46,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="">
-                        <a href="index.html" class="logo">
+                        <a href="index.php" class="logo">
                             <img src="assets/images/icono.png" alt="logo" class="logo-lg" />Ventas Vic.
                             <img src="assets/images/icono.png" alt="logo" class="logo-sm hidden" />
                         </a>
@@ -90,7 +96,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                         <!--</li>-->
                                     </ul>
                                 </li>
-
                                 <li class="dropdown top-menu-item-xs">
                                     <a href="" class="dropdown-toggle menu-right-item profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-circle"> </a>
                                    <ul class="dropdown-menu">
@@ -132,11 +137,12 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                             <!-- Left Menu Start -->
                             <ul class="metisMenu nav" id="side-menu">
-                                <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
+                                
+                                 <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
                                 
                                 <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
 
-                                <li>
+                               <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
                                         <li><a href="usuarios.php">usuarios</a></li>
@@ -164,7 +170,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 </li>
                                 <li><a href="ventas.php"><i class="mdi mdi-basket-unfill"></i> Ventas </a></li>
 
-                                <li>
+
+                               <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-contact-mail"></i> Proveedores <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
                                         <li><a href="prov_ver.php">Ver</a></li>
@@ -172,9 +179,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                     </ul>
                                 </li>
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
-                                <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
+                               <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
 
-                               
                             </ul>
                         </div>
                     </div><!--Scrollbar wrapper-->
@@ -186,75 +192,55 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                     <div class="container">
                         <div class="row">
-							<div class="col-sm-12">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
+                            <div class="col-sm-12">
+                                <h4 class="m-t-0 header-title">Data Tables</h4>
 
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-custom mdi mdi-airplay"></i> <b data-plugin="counterup">5</b></h3>
-												<p class="text-muted">Clientes</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-info mdi mdi-black-mesa"></i> <b data-plugin="counterup">3</b></h3>
-												<p class="text-muted">Empleados</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center b-0">
-												<h3 class="m-t-10"><i class="text-danger mdi mdi-cellphone-link"></i> <b data-plugin="counterup">5893</b></h3>
-												<p class="text-muted">Total de Visitas</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-                        <!--end row -->
                         
-                        <div class="row">
-							<div class="col-md-3">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-ms-3">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										
-
-									</div>
-								</div>
-							</div>
-						</div>
-                            
-
-                           
+                            </div>
+                        </div>
 
 
+                        <div class="row p-t-50">
+                            <div class="col-sm-12">
+                                <div class="m-b-20 table-responsive">
 
+                                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                                        <thead>
+                                        <tr>
+                                            <th>Proveedor</th>
+                                            <th>costo</th>
+                                            <th>costo iva</th>
+                                            <th>fecha</th>
+                                            <th>descripción</th>
+                                        </tr>
+                                        </thead>
+
+
+                                        <tbody>
+                                        
+                                        
+                                        <tr>
+                                            <td>www.mercadolibre.com</td>
+                                            <td>$4006.00</td>
+                                            <td>$4506.00</td>
+                                            <td>20/ago/17</td>
+                                            <td>20 memorias de flash</td>
+                                        </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- end container -->
 
-                    <div class="footer">
+                   <div class="footer">
                         <div>
                             <strong>Ventas Victoria</strong> - Copyright &copy; 2017
                         </div>
-                    </div>  <!-- end footer -->
+                    </div> <!-- end footer -->
 
                 </div>
                 <!-- End #page-right-content -->
@@ -272,12 +258,25 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
         <script src="assets/js/metisMenu.min.js"></script>
         <script src="assets/js/jquery.slimscroll.min.js"></script>
 
-        <!--Morris Chart-->
-		<script src="assets/plugins/morris/morris.min.js"></script>
-		<script src="assets/plugins/raphael/raphael-min.js"></script>
+        <!-- Datatable js -->
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+        <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/jszip.min.js"></script>
+        <script src="assets/plugins/datatables/pdfmake.min.js"></script>
+        <script src="assets/plugins/datatables/vfs_fonts.js"></script>
+        <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.print.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.colVis.js"></script>
+        <script src="assets/plugins/datatables/dataTables.fixedColumns.min.js"></script>
 
-        <!-- Dashboard init -->
-		<script src="assets/pages/jquery.dashboard.js"></script>
+        <!-- init -->
+        <script src="assets/pages/jquery.datatables.init.js"></script>
 
         <!-- App Js -->
         <script src="assets/js/jquery.app.js"></script>

@@ -15,18 +15,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
         <link rel="shortcut icon" href="assets/images/icono.png">
 
-        <!-- Plugins css-->
-        <link href="assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" rel="stylesheet" />
-        <link rel="stylesheet" href="assets/plugins/switchery/switchery.min.css">
-        <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
-		<link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-        <!-- Summernote css -->
-        <link href="assets/plugins/summernote/summernote.css" rel="stylesheet" />
-
+        <!--Morris Chart CSS -->
+		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -36,6 +26,11 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
         <link href="assets/css/icons.css" rel="stylesheet">
         <!-- Custom styles for this template -->
         <link href="assets/css/style.css" rel="stylesheet">
+        <link href="assets/plugins/ion-rangeslider/ion.rangeSlider.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/ion-rangeslider/ion.rangeSlider.skinModern.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+        
+        
 
     </head>
 
@@ -134,15 +129,17 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 </div>
                                 <div class="user-info">
                                     <a>Aarón L. Sánchez Mtz.</a>
-                                     <p class="text-muted m-0">Administratdor</p>
+                                    <p class="text-muted m-0">Administratdor</p>
                                 </div>
                             </div>
                             <!--- End User Detail box -->
 
                             <!-- Left Menu Start -->
                             <ul class="metisMenu nav" id="side-menu">
-                                 <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
-                               <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
+                                
+                                <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
+                                
+                                <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
                                 
                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
@@ -172,7 +169,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 </li>
                                 <li><a href="ventas.php"><i class="mdi mdi-basket-unfill"></i> Ventas </a></li>
 
-                                
                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-contact-mail"></i> Proveedores <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
@@ -181,7 +177,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                     </ul>
                                 </li>
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
-                                <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
+                                <li><a href="calendario.php"><i class="mdi mdi-calendar-clock"></i> Calendario </a></li>
 
                             </ul>
                         </div>
@@ -193,136 +189,59 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <div id="page-right-content">
 
                     <div class="container">
+                        <h4 class="header-title">Tamaño de letra</h4>
+                        <form class="form-horizontal">
+                            <div class="col-md-11">
+                            <div class="form-group">
+                                            <label for="range_01" class="col-sm-2 control-label">Default<span class="font-normal text-muted clearfix"></span></label>
+                                            <div class="col-sm-10">
+                                                <input type="text" id="range_01">
+                                            </div>
+                                        </div>
+                            
+                            </div>
+                        </form>
+                        <br><br><br>
+                        <h4 class="header-title m-t-0">Cambiar color de fondo</h4>
+                        <div class="col-md-6">
                         
-                                    <h4 class="header-title m-t-0">Hacer nuevo pedido</h4>
+                                    
+                                    <div class="">
+                                        <form action="#">
+                                            
+                                            <div class="form-group m-b-0">
+                                                <label>Color de fondo</label>
+                                                <div data-color-format="rgb" data-color="rgb(255, 255, 255)" class="colorpicker-default input-group">
+                                                    <input type="text" readonly="readonly" value="" class="form-control">
+                                                    <span class="input-group-btn add-on">
+                                                        <button class="btn btn-white" type="button">
+                                                            <i style="background-color: rgb(124, 66, 84);margin-top: 2px;"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="form-group m-b-0">
+                                                <label>Color de ventana</label>
+                                                <div data-color-format="rgb" data-color="rgb(255, 255, 240)" class="colorpicker-default input-group">
+                                                    <input type="text" readonly="readonly" value="" class="form-control">
+                                                    <span class="input-group-btn add-on">
+                                                        <button class="btn btn-white" type="button">
+                                                            <i style="background-color: rgb(124, 66, 84);margin-top: 2px;"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </form>
 
-                                        <form action="#" class="form-validation">
-                                            
-                                            <div class="form-group">
-                                                <div class="row">
-                                                  <div class="col-md-4">
-                                            <label>Proveedor<span class="text-danger"></span></label>
-                                            <select class="form-control select2">
-                                            <option></option>
-                                            <option value="AK">Alaska</option>
-                                            <option value="HI">Hawaii</option>
-                                            </select>
-                                            </div>
-                                                    <div class="col-md-2">
-                                                <p>&nbsp;</p>
-                                                <button class="btn btn-rounded" type="button" href="proveedor.php">
-                                                    Nuevo
-                                                </button>
-                                            </div>
-                                                    
-                                                    <div class="col-md-4">
-                                            <label>Contacto<span class="text-danger"></span></label>
-                                            <select class="form-control select2">
-                                            <option></option>
-                                            <option value="AK">Alaska</option>
-                                            <option value="HI">Hawaii</option>
-                                            </select>
-                                            </div>
-                                                    <div class="col-md-2">
-                                                <p>&nbsp;</p>
-                                                <button class="btn btn-rounded" type="button" href="proveedor.php">
-                                                    Nuevo
-                                                </button>
-                                            </div>
-                                                    
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                           <div class="col-md-4">
-                                            <label>Metodo de envio<span class="text-danger"></span></label>
-                                            <select class="form-control select2">
-                                            <option></option>
-                                            <option value="person">En persona</option>
-                                            <option value="terrest">Terrestre</option>
-                                            <option value="mar">Mar</option>
-                                            <option value="aire">Aire</option>
-                                            </select>
-                                            </div>
-                                                    <div class="col-md-2">
-                                                <p>&nbsp;</p>
-                                                <button class="btn btn-rounded"type="button" href="proveedor.php">
-                                                    Nuevo
-                                                </button>
-                                            </div>
-                                            <div class="col-md-3 ">
-                                             <div class="form-group" >
-                                                <label><br>Precio de Compra<span class="text-danger"></span></label>
-                                                <input name="precio_compra" required placeholder="$" class="form-control">
-                                            </div>
-                                            </div>
-                                            <div class="col-md-3">
-                                            <div class="form-group" >
-                                                <label>Precio total de Compra (iva, envio, seguro, etc.)<span class="text-danger"></span></label>
-                                                <input name="precio_venta" required placeholder="$" class="form-control">
-                                            </div>
-                                            </div>
-                                            </div>
-                                            
-                                            <div class="row">
-                                            <div class="col-md-3">
-                                                <label>Forma de pago<span class="text-danger"></span></label>
-                                            <select class="form-control select2">
-                                            <option></option>
-                                            <option value="person">En persona</option>
-                                            <option value="visa">Visa</option>
-                                            <option value="card">Mastercard</option>
-                                            <option value="aire">Depósito bancario</option>
-                                            </select>
-                                                
-                                            </div>
-                                                <div class="col-md-4">
-                                                     <div class="form-group" >
-                                                         
-                                                <label>Código de Rastreo del Paquete <span class="text-danger"></span></label>
-                                                <input name="rastro" required placeholder="" class="form-control">
-                                            </div>
-                                                
-                                                </div>
-                                                
-                                                <div class="form-group">
-                                                        <label>Fecha de Pedido &thinsp;&thinsp;&thinsp; &nbsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;&thinsp;  Fecha de entrega</label>
-                                                        <div>
-                                                            <div class="input-daterange input-group" id="date-range">
-                                                                <input type="text" class="form-control" name="start" />
-                                                                <span class="input-group-addon b-0">to</span>
-                                                                <input type="text" class="form-control" name="end" />
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                
-                                            </div>
-                                            
-                                            
-                                            <p></p>
-                                            
-                                            <div class="row">
-								<div class="p-20 m-b-5">
-									<h4 class="m-b-30 m-t-0 header-title">Descricpión</h4>
-									<div class="summernote">
-										
-									</div>
-                              </div>
-                                            </div>
-                                            
-                                            <div class="row ">
-                                            <div class="form-group text-right">
-                                                <button class="btn btn-primary waves-effect waves-light" type="submit">
+                                    </div>
+                        </div>
+                        <br>
+                        <div class="col-md-1 col-md-offset-10">
+                        <button class="btn btn-primary waves-effect waves-light" type="submit">
                                                     Guardar
                                                 </button>
-                                                <button type="reset" class="btn btn-default waves-effect m-l-5">
-                                                    Cancelar
-                                                </button>
-                                            </div>
-                                            </div>
-
-                                        </form>
-                                   
+                        </div>
+                        
                     </div>
                     <!-- end container -->
 
@@ -348,6 +267,36 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
         <script src="assets/js/metisMenu.min.js"></script>
         <script src="assets/js/jquery.slimscroll.min.js"></script>
 
+        <!--Morris Chart-->
+		<script src="assets/plugins/morris/morris.min.js"></script>
+		<script src="assets/plugins/raphael/raphael-min.js"></script>
+
+        <!-- Dashboard init -->
+		<script src="assets/pages/jquery.dashboard.js"></script>
+
+        <!-- App Js -->
+        <script src="assets/js/jquery.app.js"></script>
+        
+         <!-- Ion Range slider js -->
+        <script src="assets/plugins/ion-rangeslider/ion.rangeSlider.min.js"></script>
+        <script src="assets/pages/jquery.range-sliders.js"></script>
+         <script src="assets/plugins/moment/moment.js"></script>
+     	<script src="assets/plugins/timepicker/bootstrap-timepicker.js"></script>
+     	<script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+     	<script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+     	<script src="assets/plugins/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+     	<script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/plugins/summernote/summernote.min.js"></script>
+        
+          <!-- form advanced init js -->
+        <script src="assets/pages/jquery.form-advanced.init.js"></script>
+
+        <!-- App Js -->
+        <script src="assets/js/jquery.app.js"></script>
+        <!-- App Js -->
+        <script src="assets/js/jquery.app.js"></script>
+
+
         <script src="assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.min.js"></script>
         <script src="assets/plugins/select2/js/select2.min.js" type="text/javascript"></script>
         <script src="assets/plugins/bootstrap-filestyle/js/bootstrap-filestyle.min.js" type="text/javascript"></script>
@@ -367,21 +316,9 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
         <!-- App Js -->
         <script src="assets/js/jquery.app.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $('.form-validation').parsley();
-                $('.summernote').summernote({
-                    height: 350,                 // set editor height
-                    minHeight: null,             // set minimum height of editor
-                    maxHeight: null,             // set maximum height of editor
-                    focus: false                 // set focus to editable area after initializing summernote
-                });
-            });
-        </script>
-
     </body>
 </html>
+
 <?php
 }else{
     header('Location: index.php');

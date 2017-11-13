@@ -98,7 +98,7 @@
                                                 <div class="checkbox checkbox-primary">
                                                     <input id="checkbox5" type="checkbox" >
                                                     <label for="checkbox5" >
-                                                        Acepto <a href="#">Términos y condiciones</a>
+                                                        Acepto <a href="terminos.php">Términos y condiciones</a>
                                                     </label>
                                                 </div>
                                             </div>

@@ -68,9 +68,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                             <!-- Top nav left menu -->
                             <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Help</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="ayuda.php">Ayuda</a></li>
+                                <li><a href="contactos.php">Contacto</a></li>
                             </ul>
 
                             <!-- Top nav Right menu -->
@@ -83,102 +82,12 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 </li>
                                 <li class="dropdown top-menu-item-xs">
                                     <a href="#" data-target="#" class="dropdown-toggle menu-right-item" data-toggle="dropdown" aria-expanded="true">
-                                        <i class="mdi mdi-bell"></i> <span class="label label-danger">3</span>
+                                        <i class="mdi mdi-bell"></i> <span class="label label-danger">0</span>
                                     </a>
                                     <ul class="dropdown-menu p-0 dropdown-menu-lg">
                                         <!--<li class="notifi-title"><span class="label label-default pull-right">New 3</span>Notification</li>-->
-                                        <li class="list-group notification-list" style="height: 267px;">
-                                           <div class="slimscroll">
-                                               <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-diamond bg-primary"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">A new order has been placed A new order has been placed</h5>
-                                                        <p class="m-0">
-                                                            <small>There are new settings available</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-
-                                               <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-cog bg-warning"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">New settings</h5>
-                                                        <p class="m-0">
-                                                            <small>There are new settings available</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-
-                                               <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-bell-o bg-custom"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">Updates</h5>
-                                                        <p class="m-0">
-                                                            <small>There are <span class="text-primary font-600">2</span> new updates available</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-
-                                               <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-user-plus bg-danger"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">New user registered</h5>
-                                                        <p class="m-0">
-                                                            <small>You have 10 unread messages</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-
-                                                <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-diamond bg-primary"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">A new order has been placed A new order has been placed</h5>
-                                                        <p class="m-0">
-                                                            <small>There are new settings available</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-
-                                               <!-- list item-->
-                                               <a href="javascript:void(0);" class="list-group-item">
-                                                  <div class="media">
-                                                     <div class="media-left p-r-10">
-                                                        <em class="fa fa-cog bg-warning"></em>
-                                                     </div>
-                                                     <div class="media-body">
-                                                        <h5 class="media-heading">New settings</h5>
-                                                        <p class="m-0">
-                                                            <small>There are new settings available</small>
-                                                        </p>
-                                                     </div>
-                                                  </div>
-                                               </a>
-                                           </div>
+                                        <li class="list-group notification-list" style="height: 100px;">
+                                          
                                         </li>
                                         <!--<li>-->
                                             <!--<a href="javascript:void(0);" class="list-group-item text-right">-->
@@ -191,8 +100,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 <li class="dropdown top-menu-item-xs">
                                     <a href="" class="dropdown-toggle menu-right-item profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-circle"> </a>
                                     <ul class="dropdown-menu">
-                                        <li><a href="javascript:void(0)"><i class="ti-user m-r-10"></i> Perfil</a></li>
-                                        <li><a href="javascript:void(0)"><i class="ti-settings m-r-10"></i> Opciones</a></li>
+                                        <li><a href="perfil.php"><i class="ti-user m-r-10"></i> Perfil</a></li>
+                                        <li><a href="opciones.php"><i class="ti-settings m-r-10"></i> Opciones</a></li>
                                         <li class="divider"></li>
                                         <li><a href="php/logout.php"><i class="ti-power-off m-r-10"></i> Salir</a></li>
                                     </ul>
@@ -234,9 +143,10 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 
                                 <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
 
-                                <li>
+                               <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
+                                        <li><a href="usuarios.php">usuarios</a></li>
                                         <li><a href="empleado_registro.php">Registro</a></li>
                                         <li><a href="empleado_agregar.php">Agregar</a></li>
                                     </ul>
@@ -259,10 +169,17 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                         <li><a href="pedidos_agregar.php">Agregar</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="ventas.php"><i class="mdi mdi-basket-unfill"></i> Ventas </a></li>
 
-                                <li><a href="proveedores.php"><span class="label label-custom pull-right"></span> <i class="mdi mdi-contact-mail"></i> Proveedores </a></li>
+                                <li>
+                                    <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-contact-mail"></i> Proveedores <span class="fa arrow"></span></a>
+                                    <ul class="nav-second-level nav" aria-expanded="true">
+                                        <li><a href="prov_ver.php">Ver</a></li>
+                                        <li><a href="prov_agregar.php">Agregar</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
-                                <li><a href="calendario.php"><i class="mdi mdi-calendar-clock"></i> Calendario </a></li>
+                                <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
 
                             </ul>
                         </div>

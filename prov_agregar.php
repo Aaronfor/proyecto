@@ -102,7 +102,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                                 <li class="dropdown top-menu-item-xs">
                                     <a href="" class="dropdown-toggle menu-right-item profile" data-toggle="dropdown" aria-expanded="true"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-circle"> </a>
-                                   <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu">
                                         <li><a href="perfil.php"><i class="ti-user m-r-10"></i> Perfil</a></li>
                                         <li><a href="opciones.php"><i class="ti-settings m-r-10"></i> Opciones</a></li>
                                         <li class="divider"></li>
@@ -147,13 +147,12 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
-                                        <li><a href="usuarios.php">usuarios</a></li>
                                         <li><a href="empleado_registro.php">Registro</a></li>
                                         <li><a href="empleado_agregar.php">Agregar</a></li>
                                     </ul>
                                 </li>
 
-                                <li>
+                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class=" mdi mdi-barcode-scan"></i> Productos <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
                                         <li><a href="producto_inventario.php">Inventario</a></li>
@@ -170,9 +169,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                         <li><a href="pedidos_agregar.php">Agregar</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="ventas.php"><i class="mdi mdi-basket-unfill"></i> Ventas </a></li>
 
-                               <li>
+                                <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-contact-mail"></i> Proveedores <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
                                         <li><a href="prov_ver.php">Ver</a></li>
@@ -193,178 +191,45 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                     <div class="container">
                         
-                                    <h4 class="header-title m-t-0">Agregar nuevo Empleado</h4>
+                                    <h4 class="header-title m-t-0">Agregar nuevo proveedor</h4>
 
                                         <form action="#" class="form-validation">
                                             
-                                            
+                                            <div class="form-group">
                                                 <div class="row">
-                                                <div class="col-md-7">
-                                                    <p></p>
-                                                    <p></p>
-                                                <label >Nombre(s)<span class="text-danger"></span></label>
+                                                <div class="col-md-6">
+                                                <label >Nombre<span class="text-danger"></span></label>
                                                 <input name="nombre" required class="form-control">
-                                                   <p></p>
-                                                <label>Apellido Paterno<span class="text-danger"></span></label>
-                                                <input name="marca" required class="form-control">
+                                                </div>
+                                                    
+                                                    <div class="col-md-3 col-md-offset-1">
+                                            <label>Teléfono<span class="text-danger"></span></label>
+                                            <input name="nombre" required class="form-control">
+                                            </div>
+                                                    
+                                                </div>
+                                                <br>
+                                            </div>
+                                            <br>
+                                             <h4 class="header-title m-t-0">Agregar nuevo Contacto</h4>
+                                            
+                                            <div class="row">
+                                            <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Nombre<span class="text-danger"></span></label>
+                                                <input required name="codigobarras" class="form-control">
+                                            </div>
+                                            </div>
+                                            <div class="col-md-3 col-md-offset-1">
+                                             <div class="form-group" >
+                                                <label>Teléfono</label>
+                                                <input name="precio_compra" required  class="form-control">
+                                            </div>
+                                            </div>
+                                            </div>
                                             <p></p>
-                                               
-                                                <label>Apellido Materno<span class="text-danger"></span></label>
-                                                <input name="marca" required class="form-control">
-                                                <p></p>
-                                               <div class="col-md-5">
-                                                <label>Teléfono Casa<span class="text-danger"></span></label>
-                                                <input name="marca" required class="form-control">
-                                                    
-                                                </div>
-                                                    <div class="col-md-5">
-                                                <label>Teléfono Celular<span class="text-danger"></span></label>
-                                                <input name="marca" required class="form-control">
-                                                    
-                                                </div>
-                                                
-                                                </div>
-                                                <div class="col-md-3 col-md-offset-1">
-                                                    
-                                                    
-                                                <label class="col-md-2 control-label">Matrícula</label>
-                                               
-                                                    <input type="text" class="form-control" readonly="" value="----------">
-                                                
-                                           
-                                                    
-                                                    <img src="assets/images/no_photo.jpg" />
-                                                    <label class="control-label">Imagen</label>
-                                                    <input type="file" class="filestyle"  data-size="sm">
-                                                    
-                                                </div> 
-                                                    </div>
-                                           
                                             
-                                            <div class="row">
-                                            <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Curp<span class="text-danger"></span></label>
-                                                <input required name="codigobarras" class="form-control">
-                                            </div>
-                                            </div>
-                                            <div class="col-md-5 ">
-                                             <div class="form-group" >
-                                                <label>NSS<span class="text-danger"></span></label>
-                                                <input name="precio_compra" required placeholder="" class="form-control">
-                                            </div>
-                                            </div>
-                                            </div>
                                             <br>
-                                            <div class="row">
-                                            <div class="col-md-2">
-                                                <label>Tipo de Sangre<span class="text-danger"></span></label>
-                                            <select class="form-control">
-                                            <option></option>
-                                                <option value="o+">A+</option>
-                                                <option value="o+">A-</option>
-                                                <option value="o+">B+</option>
-                                                <option value="o+">B-</option>
-                                                <option value="o+">O+</option>
-                                                <option value="o-">O-</option>
-                                                <option value="ab">AB+</option>
-                                                <option value="ab-">AB-</option>
-                                            </select>
-                                            </div>
-                                            <div class="col-md-3">
-                                                 <div class="form-group" >
-                                                <label>Fecha Nac.<span class="text-danger"></span></label>
-                                                      <div class="form-group">
-                                                        <div>
-                                                            <div class="input-group">
-                                                                <input type="text" class="form-control" placeholder="mes/dia/año" id="datepicker-autoclose">
-                                                            </div><!-- input-group -->
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            </div> 
-                                                <label class="col-md-4">Alergias</label>
-                                          
-                                                <div class="col-md-5">
-                                                    <textarea class="form-control" rows="3"></textarea>
-                                                </div>
-                                        </div>
-                                            <p></p>
-                                            <div class="row">&nbsp;&nbsp; Dirección</div>
-                                            <br>
-                                            
-                                        
-                                            <div class="row">
-                                            <div class="col-md-5">
-                                            <div class="form-group">
-                                                <label>Colonia<span class="text-danger"></span></label>
-                                                <input required name="codigobarras" class="form-control">
-                                            </div>
-                                            </div>
-                                            <div class="col-md-4 ">
-                                             <div class="form-group" >
-                                                <label>Calle<span class="text-danger"></span></label>
-                                                <input name="precio_compra" required placeholder="" class="form-control">
-                                            </div>
-                                            </div>
-                                                
-                                            
-                                                
-                                            </div>
-                                            <div class="row">
-                                            <div class="col-md-2">
-                                            <div class="form-group">
-                                                <label>CP<span class="text-danger"></span></label>
-                                                <input required name="codigobarras" class="form-control">
-                                            </div>
-                                            </div>
-                                                <div class="col-md-4">
-                                            <div class="form-group col-md-offset-6" >
-                                                <label>Número Interior<span class="text-danger"></span></label>
-                                                <input name="precio_venta" required placeholder="" class="form-control">
-                                            </div>
-                                            </div>
-                                            <div class="col-md-2 col-md-offset-2">
-                                            <div class="form-group" >
-                                                <label>Número Exterior<span class="text-danger"></span></label>
-                                                <input name="precio_venta" required placeholder="" class="form-control">
-                                            </div>
-                                            </div>
-                                            
-                                            </div>
-                                            <br>
-                                            <br>
-                                            
-                                            <div class="row">
-                                            <div class="col-md-5">
-                                             <div class="form-group" >
-                                                <label>Correo<span class="text-danger"></span></label>
-                                                <input name="precio_venta" type="email" required placeholder="" class="form-control">
-                                            </div>
-                                            </div>
-                                                
-                                            <div class="col-md-3">
-                                                 <div class="form-group" >
-                                                <label>Sueldo<span class="text-danger"></span></label>
-                                                <input name="precio_venta" required placeholder="$" class="form-control">
-                                            </div>
-                                            </div> 
-                                            <div class="col-md-3">
-                                                 <div class="form-group" >
-                                                <label>Puesto<span class="text-danger"></span></label>
-                                                <input name="precio_venta" required placeholder="" class="form-control">
-                                            </div>
-                                            </div> 
-                                            </div>
-                                            <div class="row">
-								<div class="p-20 m-b-5">
-									<h4 class="m-b-30 m-t-0 header-title">Descricpión de la persona</h4>
-									<div class="summernote">
-										
-									</div>
-                              </div>
-                                            </div>
-                                            
                                             <div class="row ">
                                             <div class="form-group text-right">
                                                 <button class="btn btn-primary waves-effect waves-light" type="submit">

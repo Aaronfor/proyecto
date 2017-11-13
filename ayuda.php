@@ -42,7 +42,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                     <div class="">
                         <a href="index.html" class="logo">
                             <img src="assets/images/icono.png" alt="logo" class="logo-lg" />Ventas Vic.
-                            <img src="assets/images/icono.png" alt="logo" class="logo-sm hidden" />
                         </a>
                     </div>
                 </div>
@@ -60,7 +59,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 <span class="clearfix"></span>
                             </div>
 
-                             <!-- Top nav left menu -->
+                            <!-- Top nav left menu -->
                             <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
                                 <li><a href="ayuda.php">Ayuda</a></li>
                                 <li><a href="contactos.php">Contacto</a></li>
@@ -132,10 +131,11 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                             <!-- Left Menu Start -->
                             <ul class="metisMenu nav" id="side-menu">
+                                
                                 <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
                                 
                                 <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
-
+                                
                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
@@ -172,9 +172,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                     </ul>
                                 </li>
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
-                                <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
+                                <li><a href="calendario.php"><i class="mdi mdi-calendar-clock"></i> Calendario </a></li>
 
-                               
                             </ul>
                         </div>
                     </div><!--Scrollbar wrapper-->
@@ -185,68 +184,40 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <div id="page-right-content">
 
                     <div class="container">
-                        <div class="row">
-							<div class="col-sm-12">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-custom mdi mdi-airplay"></i> <b data-plugin="counterup">5</b></h3>
-												<p class="text-muted">Clientes</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-info mdi mdi-black-mesa"></i> <b data-plugin="counterup">3</b></h3>
-												<p class="text-muted">Empleados</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center b-0">
-												<h3 class="m-t-10"><i class="text-danger mdi mdi-cellphone-link"></i> <b data-plugin="counterup">5893</b></h3>
-												<p class="text-muted">Total de Visitas</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-                        <!--end row -->
+                        <div class="col-sm-12">
+                                <h4 class="header-title">Ayuda</h4>
+                            </div> <!-- end col -->
                         
-                        <div class="row">
-							<div class="col-md-3">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-ms-3">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										
-
-									</div>
-								</div>
-							</div>
-						</div>
-                            
-
-                           
-
-
-
-
+                    
+                    
+                        <div class="container">
+                        <div class="col-sm-12">
+                                <h4>Como usar el sistema</h4>
+                                <p>Manual</p>
+                                <a href="">link</a>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                        
+                    <br>
+                    <div class="container">
+                        <div class="col-sm-12">
+                                <h4 class="header-title">Preguntas frecuentes</h4>
+                            </div> <!-- end col -->
+                        </div> <!-- end row -->
+                    <div> 
+                        <h4>¿Dónde puedo agrepar un producto nuevo?</h4>
+                        <p>R: en el menú de la izquierda en Productos -> Agrgar llenar los datos correspondientes y guardar.</p>
+                       
+                        <br>
+                        <h4>¿Dónde puedo agrepar un producto proveedor?</h4>
+                        <p>R: en el menú de la izquierda en Proveedores -> Agrgar llenar los datos correspondientes y guardar.</p>
+                        <br><br>
+                        <br>
+                        <h4>Sí tienes más dudas envia un correo a los desarrolladores o al correo:</h4>
+                        <a href="">servicios_sistemas@hotmail.com</a>
+                        
+                    
+                        
                     </div>
                     <!-- end container -->
 
@@ -254,7 +225,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                         <div>
                             <strong>Ventas Victoria</strong> - Copyright &copy; 2017
                         </div>
-                    </div>  <!-- end footer -->
+                    </div> <!-- end footer -->
 
                 </div>
                 <!-- End #page-right-content -->
@@ -284,6 +255,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
     </body>
 </html>
+
 <?php
 }else{
     header('Location: index.php');

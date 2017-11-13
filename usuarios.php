@@ -15,8 +15,14 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
         <link rel="shortcut icon" href="assets/images/icono.png">
 
-        <!--Morris Chart CSS -->
-		<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+        <!-- DataTables -->
+        <link href="assets/plugins/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/dataTables.colVis.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/dataTables.bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/plugins/datatables/fixedColumns.dataTables.min.css" rel="stylesheet" type="text/css"/>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap.min.css" rel="stylesheet">
@@ -40,7 +46,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <!-- LOGO -->
                 <div class="topbar-left">
                     <div class="">
-                        <a href="index.html" class="logo">
+                        <a href="index.php" class="logo">
                             <img src="assets/images/icono.png" alt="logo" class="logo-lg" />Ventas Vic.
                             <img src="assets/images/icono.png" alt="logo" class="logo-sm hidden" />
                         </a>
@@ -132,7 +138,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                             <!-- Left Menu Start -->
                             <ul class="metisMenu nav" id="side-menu">
-                                <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
+                                
+                                 <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
                                 
                                 <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
 
@@ -174,7 +181,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
                                 <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
 
-                               
                             </ul>
                         </div>
                     </div><!--Scrollbar wrapper-->
@@ -185,52 +191,14 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <div id="page-right-content">
 
                     <div class="container">
-                        <div class="row">
-							<div class="col-sm-12">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-custom mdi mdi-airplay"></i> <b data-plugin="counterup">5</b></h3>
-												<p class="text-muted">Clientes</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-info mdi mdi-black-mesa"></i> <b data-plugin="counterup">3</b></h3>
-												<p class="text-muted">Empleados</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center b-0">
-												<h3 class="m-t-10"><i class="text-danger mdi mdi-cellphone-link"></i> <b data-plugin="counterup">5893</b></h3>
-												<p class="text-muted">Total de Visitas</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-                        <!--end row -->
-                        
-                        <div class="row">
+<div class="row">
 							<div class="col-md-3">
 								<div class="card-box widget-inline">
 									<div class="row">
 										<div class="col-ms-3">
 											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
+												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">1</b></h3>
+												<p class="text-muted">Usuarios</p>
 											</div>
 										</div>
 
@@ -240,12 +208,75 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 								</div>
 							</div>
 						</div>
-                            
-
-                           
 
 
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="card-box">
+                                    <h4 class="m-t-0">Usuarios</h4>
+                                    <div class="table-responsive">
+                                        <table class="table table-hover mails m-0 table table-actions-bar">
+                                            <thead>
+                                                <tr>
+                                                    <th style="min-width: 95px;">
+                                                        <div >
+                                                            <label >Con Acceso</label>
+                                                        </div>
+                                                        <!--<div class="btn-group dropdown">-->
+                                                            <!--<button type="button" class="btn btn-default btn-xs dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false"><i class="caret"></i></button>-->
+                                                            <!--<ul class="dropdown-menu" role="menu">-->
+                                                                <!--<li><a href="#">Action</a></li>-->
+                                                                <!--<li><a href="#">Another action</a></li>-->
+                                                                <!--<li><a href="#">Something else here</a></li>-->
+                                                                <!--<li class="divider"></li>-->
+                                                                <!--<li><a href="#">Separated link</a></li>-->
+                                                            <!--</ul>-->
+                                                        <!--</div>-->
+                                                    </th>
+                                                    <th>Nombre</th>
+                                                    <th>Correo</th>
+                                                    <th>Matricula</th>
+                                                    <th>fecha de ingreso</th>
+                                                </tr>
+                                            </thead>
 
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="checkbox checkbox-primary m-r-15">
+                                                            <input id="checkbox2" type="checkbox">
+                                                            <label for="checkbox2"></label>
+                                                        </div>
+
+                                                        <img src="assets/images/users/avatar-2.jpg" alt="contact-img" title="contact-img" class="img-circle thumb-sm" />
+                                                    </td>
+
+                                                    <td>
+                                                        Aaron Leonardo Sánchez Martinez
+                                                    </td>
+
+                                                    <td>
+                                                        <a href="#" class="text-muted">1530509@upv.edu.mx</a>
+                                                    </td>
+
+                                                    <td>
+                                                        <b><a href="" class="text-dark"><b>SAMA100797</b></a> </b>
+                                                    </td>
+
+                                                    <td>
+                                                        01/11/2017
+                                                    </td>
+
+                                                </tr>
+
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
                     <!-- end container -->
@@ -254,7 +285,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                         <div>
                             <strong>Ventas Victoria</strong> - Copyright &copy; 2017
                         </div>
-                    </div>  <!-- end footer -->
+                    </div> <!-- end footer -->
 
                 </div>
                 <!-- End #page-right-content -->
@@ -272,12 +303,25 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
         <script src="assets/js/metisMenu.min.js"></script>
         <script src="assets/js/jquery.slimscroll.min.js"></script>
 
-        <!--Morris Chart-->
-		<script src="assets/plugins/morris/morris.min.js"></script>
-		<script src="assets/plugins/raphael/raphael-min.js"></script>
+        <!-- Datatable js -->
+        <script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.bootstrap.js"></script>
+        <script src="assets/plugins/datatables/dataTables.buttons.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/jszip.min.js"></script>
+        <script src="assets/plugins/datatables/pdfmake.min.js"></script>
+        <script src="assets/plugins/datatables/vfs_fonts.js"></script>
+        <script src="assets/plugins/datatables/buttons.html5.min.js"></script>
+        <script src="assets/plugins/datatables/buttons.print.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.keyTable.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="assets/plugins/datatables/responsive.bootstrap.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.scroller.min.js"></script>
+        <script src="assets/plugins/datatables/dataTables.colVis.js"></script>
+        <script src="assets/plugins/datatables/dataTables.fixedColumns.min.js"></script>
 
-        <!-- Dashboard init -->
-		<script src="assets/pages/jquery.dashboard.js"></script>
+        <!-- init -->
+        <script src="assets/pages/jquery.datatables.init.js"></script>
 
         <!-- App Js -->
         <script src="assets/js/jquery.app.js"></script>

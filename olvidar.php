@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Ventas Victoria</title>
+         <title>Ventas Victoria</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
         <meta content="Coderthemes" name="author" />
@@ -36,44 +35,28 @@
                             <div class="m-t-40 card-box">
                                 <div class="text-center">
                                     <h2 class="text-uppercase m-t-0 m-b-30">
-                                            <span class="text-info">
-                                                <img src="assets/images/icono.png" alt="" height="75">&nbsp;Ventas Victoria
-                                            </span>
+                                            <span><img src="assets/images/icono.png" alt="" height="30">&nbsp; Ventas Victoria</span>
+                                        
                                     </h2>
                                     <!--<h4 class="text-uppercase font-bold m-b-0">Sign In</h4>-->
                                 </div>
                                 <div class="account-content">
-                                    <form class="form-horizontal" action="php/validarLogin.php" method="post">                                     
+                                    <div class="text-center m-b-20">
+                                        <p class="text-muted m-b-0 line-h-24">Introduce tu correo electronico para recuperar tu contraseña.  </p>
+                                    </div>
 
-                                        <div class="form-group m-b-20">
-                                            <div class="col-sm-12">
-                                                <label >Usuario</label>
-                                                 <div class="input-group">
-                                                    <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                                                    <input class="form-control" style="border-radius:8px;" type="text" name="user" id="user" required="" placeholder="ejemplo123">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
+                                    <form class="form-horizontal" action="#">
 
                                         <div class="form-group m-b-20">
                                             <div class="col-xs-12">
-                                                <a href="olvidar.php" class="text-muted pull-right font-14">¿Olvidaste tu contraseña?</a>
-                                                
-                                                <label>Contraseña</label>
-                                                <div class="input-group">
-                                                    <span class="input-group-addon"><i class="mdi mdi-key-variant"></i></span>
-                                                    <input class="form-control" style="border-radius:8px;" type="password" required="" name="password" id="password" placeholder="Introduce tu contraseña">
-                                                </div>
-                                                
-                                                
+                                                <label for="emailaddress">Correo</label>
+                                                <input class="form-control" type="email" id="emailaddress" required="" placeholder="">
                                             </div>
                                         </div>
-                                       
-                                        
+
                                         <div class="form-group account-btn text-center m-t-10">
                                             <div class="col-xs-12">
-                                                <button class="btn btn-lg btn-primary btn-block" style="border-radius:30px;" type="submit" name="validar">Entrar</button>
+                                                <button class="btn btn-lg btn-primary btn-block" type="submit">Recuperar Contraseña</button>
                                             </div>
                                         </div>
 
@@ -84,11 +67,14 @@
                                 </div>
                             </div>
                             <!-- end card-box-->
+
+
                             <div class="row m-t-50">
                                 <div class="col-sm-12 text-center">
-                                    <p class="text-muted">No tienes una cuenta<a href="registro.php" class="text-info m-l-5"> Crear cuenta</a></p>
+                                    <p class="text-muted">Regresar <a href="index.php" class="text-dark m-l-5">Iniciar Sesión</a></p>
                                 </div>
                             </div>
+
                         </div>
                         <!-- end wrapper -->
 

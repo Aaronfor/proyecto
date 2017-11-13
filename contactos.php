@@ -42,7 +42,6 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                     <div class="">
                         <a href="index.html" class="logo">
                             <img src="assets/images/icono.png" alt="logo" class="logo-lg" />Ventas Vic.
-                            <img src="assets/images/icono.png" alt="logo" class="logo-sm hidden" />
                         </a>
                     </div>
                 </div>
@@ -60,9 +59,9 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                 <span class="clearfix"></span>
                             </div>
 
-                             <!-- Top nav left menu -->
+                            <!-- Top nav left menu -->
                             <ul class="nav navbar-nav hidden-sm hidden-xs top-navbar-items">
-                                <li><a href="ayuda.php">Ayuda</a></li>
+                                 <li><a href="ayuda.php">Ayuda</a></li>
                                 <li><a href="contactos.php">Contacto</a></li>
                             </ul>
 
@@ -132,10 +131,11 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
                             <!-- Left Menu Start -->
                             <ul class="metisMenu nav" id="side-menu">
+                                
                                 <li><a href="menu.php"><i class="ti-home"></i> Menú </a></li>
                                 
                                 <li><a href="dashboard.php"><i class="menu-icon fa fa-tachometer"></i> Dashboard </a></li>
-
+                                
                                 <li>
                                     <a href="javascript: void(0);" aria-expanded="true"><i class="mdi mdi-account-card-details"></i> Empleados <span class="fa arrow"></span></a>
                                     <ul class="nav-second-level nav" aria-expanded="true">
@@ -172,9 +172,8 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                                     </ul>
                                 </li>
                                 <li><a href="mapa.php"><i class="ti-location-pin"></i> Mapa </a></li>
-                                <li><a href="agenda.php"><i class="mdi mdi-calendar-clock"></i> Agenda </a></li>
+                                <li><a href="calendario.php"><i class="mdi mdi-calendar-clock"></i> Calendario </a></li>
 
-                               
                             </ul>
                         </div>
                     </div><!--Scrollbar wrapper-->
@@ -185,67 +184,63 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                 <div id="page-right-content">
 
                     <div class="container">
-                        <div class="row">
-							<div class="col-sm-12">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-custom mdi mdi-airplay"></i> <b data-plugin="counterup">5</b></h3>
-												<p class="text-muted">Clientes</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-info mdi mdi-black-mesa"></i> <b data-plugin="counterup">3</b></h3>
-												<p class="text-muted">Empleados</p>
-											</div>
-										</div>
-
-										<div class="col-lg-3 col-sm-6">
-											<div class="widget-inline-box text-center b-0">
-												<h3 class="m-t-10"><i class="text-danger mdi mdi-cellphone-link"></i> <b data-plugin="counterup">5893</b></h3>
-												<p class="text-muted">Total de Visitas</p>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-                        <!--end row -->
                         
                         <div class="row">
-							<div class="col-md-3">
-								<div class="card-box widget-inline">
-									<div class="row">
-										<div class="col-ms-3">
-											<div class="widget-inline-box text-center">
-												<h3 class="m-t-10"><i class="text-primary mdi mdi-access-point-network"></i> <b data-plugin="counterup">4</b></h3>
-												<p class="text-muted">Ventas</p>
-											</div>
-										</div>
-
-										
-
-									</div>
-								</div>
-							</div>
-						</div>
+                            <div class="col-sm-12">
+                                <h4 class="header-title m-t-0 m-b-20">Contactos</h4>
+                            </div>
                             
+                            <div class="row">
+                        	<div class="col-md-4">
+                        		<div class="text-center card-box">
+                                    <div class="dropdown pull-right">
+                                        <a href="#" class="dropdown-toggle card-drop" data-toggle="dropdown" aria-expanded="false">
+                                            <h3 class="m-0 text-muted"><i class="mdi mdi-dots-horizontal"></i></h3>
+                                        </a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            
+                                            <li><a href="#">Eliminar</a></li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="member-card">
+                                        <span class="user-badge bg-info">Contacto 1</span>
+                                        <div class="thumb-xl member-thumb m-b-10 center-block">
+                                            <img src="assets/images/users/avatar-3.jpg" class="img-circle img-thumbnail" alt="profile-image">
+                                            <i class="mdi mdi-information-outline member-star text-success" title="verified user"></i>
+                                        </div>
 
-                           
+                                        <div class="">
+                                            <h4 class="m-b-5">Christopher Robin</h4>
+                                            <p class="text-muted"> <span> <a href="#" class="text-pink">robin123_chris@hotmail.com</a> </span></p>
+                                        </div>
 
+                                        <p class="text-muted font-13">
+                                            Hola, cualquier duda sobre el sistema contactame o envia un correo en las preguntas frecuentes.
+                                        </p>
 
+                                        <button type="button" class="btn btn-default btn-sm m-t-10">Contactar</button>
 
+                                        <ul class="social-links list-inline m-t-30">
+                                            <li>
+                                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Facebook"><i class="fa fa-facebook"></i></a>
+                                            </li>
+                                            <li>
+                                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Twitter"><i class="fa fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="" data-original-title="Skype"><i class="fa fa-skype"></i></a>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+
+                                </div>
+
+                            </div> <!-- end col -->
+                            </div>
+                        </div> <!-- end row -->
 
                     </div>
                     <!-- end container -->
@@ -254,7 +249,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
                         <div>
                             <strong>Ventas Victoria</strong> - Copyright &copy; 2017
                         </div>
-                    </div>  <!-- end footer -->
+                    </div> <!-- end footer -->
 
                 </div>
                 <!-- End #page-right-content -->
@@ -284,6 +279,7 @@ if($_SESSION['sesion']==1&&isset($_SESSION['sesion'])){
 
     </body>
 </html>
+
 <?php
 }else{
     header('Location: index.php');
